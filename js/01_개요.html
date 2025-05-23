@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요</title>
+</head>
+<body>
+    <h1>개요</h1>
+    <hr>
+    <h2>자바스크립트</h2>
+    <pre>
+    웹 브라우저에서 사용되는 인터프리터 방식의 스크립트 언어(함수, 객체지향)
+    인터프리터 방식 : 컴파일 과정 없이 실행하면서 코드를 하나씩 읽어내는 방식
+                    (코드 문법에 오류가 있으면 실행 시점에 알 수 있음)
+    </pre>
+    <h3>1. 자바스크립트 사용법</h3>
+    <pre>
+    태그 내에 직접 간단한 코드를 작성해서 실행하는 방법
+    자바스크립트 소스가 몇 줄 안되는 경우 inline 방식을 사용한다.
+    </pre>
+    <!--인라인방식-->
+    <button onclick="console.log('버튼1번');">버튼</button> 
+
+    <h4>internal(내부)</h4>
+    <pre>
+    script 태그 영역에 함수 단위로 소스코드를 작성해놓고
+    이벤트 발생 시 해당 함수를 호출함으로써 실행하는 방식이다.
+    </pre>
+    <h4>external(외부)</h4>
+    <pre>
+    별도의 .js 파일로 작성해서 html 파일에서 가져다 사용하는 방법
+    자바스크립트의 양이 많거나 중복코드가 있을 경우 자바스크립트 코드 부분을 별도의 외부 파일로 작성한다.
+    </pre>
+    <hr>
+    <h3>2. 데이터 입출력</h3>
+    <h4>[1. 데이터 입력] </h4>
+    <pre>
+    window.confirm() - 어떤 질문에 대해 "예/아니오"의 결과를 얻을 때 사용한다. 
+    - 확인 버튼과 취소 버튼이 나타나며 확인 버튼 클릭 시 true, 취소 버튼 클릭 시 false를 리턴한다.
+    [console창에서 확인가능]
+    </pre>
+    <script>
+        // x = window.confirm("히지니");
+        // console.log(x);
+    </script>
+    <pre>
+    window.prompt() 
+    - 텍스트 필드, 확인, 취소 버튼이 있는 대화 상자를 띄운다. 
+    - 입력한 메시지 내용을 리턴값으로 돌려받는다. 취소버튼 클릭시 null값 전달 [console창에서 확인가능]
+    </pre>
+    <script>
+        // x = window.prompt("히지니");
+        // console.log(x);        
+    </script>
+    <hr>
+    <h4>[2. 데이터 출력]</h4>
+    <pre>
+    document.write();
+    - 브라우저 화면상의 페이지에 직접 값을 출력한다
+    - html코드를 넣으면 코드특성도 반영된다.
+    </pre>
+    <script>
+        document.write("우냐양ㅇ");
+        document.write("<h1> 우냐양ㅇ</h1>");
+    </script>
+
+    <p>알림창</p>
+    <script>
+        // window.alert("히진이");
+        // alert("히진이"); 오로지 확인버튼만 리턴 
+    </script>
+
+    <p>요소에 접근</p>
+    <h3>[3. HTML요소에 접근]</h3>
+
+    <button onclick="f01();">눌러봐</button>
+    <div id="target" class="box">암우건아</div>
+    
+    <script>
+        function f01(){ //button onclick으로 동작하게 하는 함수
+            input = window.prompt("색상을 입력하세요");
+
+            x = document.querySelector("div");
+            //querySelector : 이 메서드가 요소를 "질의(query)"하여 찾는 역할을 하기 때문
+            console.log(x);
+
+            x.style.backgroundColor = input;
+            x.style.color = "blue";
+            x.innerHTML = "암거나";
+            // x.innerHTML = "<h1>아무거나</h1>";   텍스트와 코드특성은 가져올 수 있음
+            // x.innerText = "<h1>아무거나</h1>";   텍스트만 변경되고 코드특성은 가져올 수 없음   
+        }
+    </script>
+
+    <hr>
+
+    <!-- 스크립트연결 -->
+    <input type="text" name="userID">
+    <script src="/01_개요.js"></script>
+
+</body>
+</html>
