@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>innerHTML 연습</title>
+</head>
+<body>
+
+  <h1 id="mainTitle">안녕하세요!</h1>
+
+  <div id="messageBox">여기에 메시지가 표시됩니다.</div>
+
+  <div id="contentArea">
+    <p>이 부분은 바뀔 수 있습니다.</p>
+  </div>
+
+  <ul id="fruitList">
+    <li>사과</li>
+    <li>바나나</li>
+  </ul>
+
+  <!-- 버튼들 (onclick으로만 이벤트 연결) -->
+  <button onclick="changeTitle()">제목 변경</button>
+  <button onclick="insertMessage()">메시지 삽입</button>
+  <button onclick="clearContent()">본문 비우기</button>
+  <button onclick="addFruit()">딸기 추가</button>
+  <button onclick="replaceFruits()">과일 목록 변경</button>
+
+  <script>
+    function changeTitle() {
+      const title2 = document.querySelector("#mainTitle");
+      title2.innerHTML = "innerHTML 연습 시작!";
+      console.log(title2);
+    }
+
+    function insertMessage() {
+      const insertMessage = document.querySelector("#messageBox")
+      insertMessage.innerHTML = "<strong>공지사항: </strong> 오늘은 점검이 있습니다."
+      console.log(insertMessage);
+    }
+
+    function clearContent() {
+      const clear = document.querySelector("#contentArea p").remove();
+      console.log(clear);
+    }
+    function addFruit() {
+      const addLi = document.querySelector("#fruitList");
+      addLi.innerHTML += "<li>딸기</li>";
+      console.log(addLi);
+    }
+
+    function replaceFruits() {
+      const replace = document.querySelector("#fruitList");
+      replace.innerHTML = "<li>석류</li><li>참외</li><li>멜론</li>";
+      console.log(replace);
+    }
+  </script>
+
+</body>
+</html>

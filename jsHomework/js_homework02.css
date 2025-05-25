@@ -1,0 +1,51 @@
+#wrap {
+    max-width: 1600px; margin: auto;
+}
+
+#wrap > .layout {
+    width: 1000px; margin: 100px auto 50px;
+    border: 5px solid #000; border-radius: 10px;
+}
+.layout h1 {text-align: center;border-bottom: 2px solid #000;padding-bottom: 20px;}
+
+.login_form {display: flex;justify-content: center;align-items: center;height: 350px;}
+.login_form ul {list-style: none;padding: 0 10px 0 0;}
+.login_form label {display: inline-block;width: 70px;font-weight: 600;font-size: 20px;vertical-align: text-top;}
+.login_form input {margin-bottom: 10px;width: 200px;height: 30px;}
+.login_form li:last-child input{margin-bottom: 0;}
+.login_form button.login {
+    width: 80px; height: 80px; background: #000000;
+    border-radius: 3px; border: 0; color: #fff; font-size: 17px;
+}
+
+.forYou {display: flex;justify-content: center;align-items: center;}
+.product_box .btn_top button{
+    width: 250px; height: 80px;
+    background: #fff; border: 1px solid #000;
+    font-size: 20px; font-weight: 600;
+}
+.product_box .btn_top button:last-child{border-left: 0;}
+.product_box .btn_top button.on{background: #000; color: #fff; border-radius: 0;}
+.product_box ul{list-style: none;padding: 20px 10px;border: 1px solid #000;border-top: 0;margin: 0;}
+.product_box li{margin-bottom: 10px;}
+.product_box li:last-child{margin-bottom:0;}
+.changeMent {text-align: center;margin-top: 50px;}
+
+.searchForm {margin: 50px 0;}
+.searchForm p {text-align: center;}
+
+.colorForm{
+    text-align: center;
+    display: flex; justify-content: center;
+    align-items: center;}
+.colorForm label {display: inline-block;width: auto; vertical-align: inherit;}
+.colorForm input {margin-bottom: 0;width: 200px;height: 30px;}
+.colorForm button {
+    width: 80px; height: 35px; background: #000000;
+    border-radius: 3px; border: 0; color: #fff;
+    font-size: 16px; vertical-align: middle; margin: 0 10px;
+}
+.colorForm span{
+    display: inline-block; width: 60px; height: 60px; 
+    background: beige; border-radius: 50%;
+}

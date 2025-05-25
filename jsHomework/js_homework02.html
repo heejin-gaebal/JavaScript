@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동적요소 포함 웹페이지</title>
+  <link rel="stylesheet" href="/js_homework02.css">
+  <script defer src="/js_homework02.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="login_wrap layout">
+      <h1>CHANEL BEAUTY BOUTIQUE</h1>
+      <div class="login_form">
+        <ul>
+          <li>
+            <label for="id">ID : </label><input type="text" id="id">
+          </li>
+          <li>
+            <label for="pwd">PWD : </label><input type="password" id="pwd">
+          </li>
+        </ul>
+        <button type="button" class="login" onclick="login();">LOGIN</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="product_wrap layout">
+      <h1>FOR YOU</h1>
+      <p class="changeMent">고객님을 위한 상품을 확인하세요</p>
+      <div class="forYou">
+        <div class="product_box">
+          <div class="btn_top">
+            <button type="button" id="new" class="on" onclick="newPro();">NEW</button><button type="button" id="best" onclick="bestPro();">BEST</button>
+          </div>
+          <ul>
+            <li>[NEW] 루쥬 코코 플래쉬</li>
+            <li>[NEW] 레 베쥬 쿠션</li>
+            <li>[NEW] 루쥬 알뤼르 벨벳</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="searchForm">
+        <p>원하는 컬러를 입력하시면 해당 색상의 모든 제품을 알려드립니다.</p> 
+        <div class="colorForm">
+          <input type="text" id="search" placeholder="원하는 컬러를 입력하세요"><label for="search"></label>
+          <button type="button" onclick="colorFunc();">컬러선택</button> <span class="colorPic"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
